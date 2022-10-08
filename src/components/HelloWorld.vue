@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="hello">
     <q-page class="flex flex-center">
       <q-select outlined v-model="model" :options="options" label="Outlined" class="mySelect" />
     </q-page>

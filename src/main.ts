@@ -2,9 +2,10 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import { Quasar } from 'quasar'
 import quasarUserOptions from './quasar-user-options'
+import router from './router'
 // import './samples/node-api'
 
-createApp(App).use(Quasar, quasarUserOptions)
+createApp(App).use(Quasar, quasarUserOptions).use(router)
   .mount('#app')
   .$nextTick(() => {
     postMessage({ payload: 'removeLoading' }, '*')

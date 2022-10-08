@@ -76,7 +76,11 @@
     </q-drawer>
 
     <q-page-container>
-      <HelloWorld />
+      <nav>
+        <router-link to="/giveup">111</router-link>
+        <router-link to="/hello">222</router-link>
+      </nav>
+      
     </q-page-container>
   </q-layout>
 </template>
@@ -84,6 +88,7 @@
 <script>
 import { ref } from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
+import GiveUp from './components/GiveUp.vue'
 
 export default {
   name: 'LayoutDefault',
@@ -99,3 +104,25 @@ export default {
   }
 }
 </script>
+<style scoped lang="scss">
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
+}
+</style>
